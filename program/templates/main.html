@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yes! Query.</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      padding: 20px;
+    }
+    .checkbox-container {
+        display: flex;
+    } 
+    .radio-label{
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+    .form-group-size {
+        max-width: 20%;
+    }
+    body {
+      background-color: #87ceeb; /* Sky blue color */
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .btn-submit {
+      margin-top: 20px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        margin-left:25%;
+    }
+    .form-group input[type="text"]{
+        margin-bottom: 5px;
+    }
+    .form-group label {
+        margin-bottom: 5px;
+    }
+    #submit{
+        margin-left:40%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Query<br></h1> 
+    <h3 class="text-center mb-4">Insert, Drop, Select</h3> 
+    <br>
+    <br>
+    <p> 하나의 값만 넣어주세요. 중복된 입력이 들어오면 최상단 명령만 수행합니다.
+    <br>
+    <br>
+    <!--studentId, instructorName, deptName, course_id, class_id-->
+    <form method="POST" action="/main">
+        <div class="form-group">
+            <label for="input1">Register</label>
+            <input type="text" id="studentId" name="input1" placeholder="학번" value="">
+            <input type="text" id="instructorName" name="input1" placeholder="교수님 성함" value="">
+            <input type="text" id="deptName" name="input1" placeholder="교수님 소속 학부" value="">
+            <input type="text" id="course_id" name="input1" placeholder="학수번호" value="">
+            <input type="text" id="class_id" name = "input1" placeholder="분반" value="">
+            
+        </div>
+
+        <div class="form-group">
+            <label for="input2">Drop</label>    
+            <input type="text" id="courseId" name="input2" placeholder="학수번호" value="">
+            <input type="text" id="studentIname" name="input2" placeholder="학번" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="input3">Search 해당 수업을 하는 교수님들 명단</label>
+            <input type="text" id="input3" name="input3" placeholder="학수번호" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="input4">Search 수업을 듣고 있는 학생들 명단</label>
+            <input type="text" id="input4" name="input4" placeholder="학수번호" value="">
+        </div>
+
+        <div class="form-group">
+            <label for="input5">Search 수업을 듣고 있는 학생들의 평균 학점</label>
+            <input type="text" id="input5" name="input5" placeholder="학수번호">
+        </div>
+
+        <div class="form-group">
+            <label for="input6">Search 특정 학생이 수강 신청한 수업</label>
+            <input type="text" id="input6" name="input6" placeholder="학번">
+        </div>
+
+        <input id = 'submit' type="submit" value="제출">
+    </form>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<!--CSS의 경우 chatgpt와 stackoverflow의 글을 참고하였습니다.-->

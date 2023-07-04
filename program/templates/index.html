@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .btn-submit {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">시간표 확인 및 수정</h1>
+    <div class="text-center mb-4">
+        시간표 확인 및 수정을 위한 페이지입니다. <br>
+        사용자의 권한이 높아야 수정을 할 수 있습니다. <br> 시간표 확인은 누구나 가능합니다.
+    </div>
+    <form method="POST" action="/">
+      <div class="form-group">
+        <label for="name">user:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

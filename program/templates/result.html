@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    /* Custom styles */
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    .btn-submit {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">SQL 명령의 결과 출력</h1>
+    {% if sql == 'register' %}
+        <h3>Success Register</h3>
+    {% elif sql == 'drop' %}
+        <h3>Success Drop!</h3>
+    {% elif sql == 'instructor' %}
+        {% if my_array %}
+            <ul>
+                {% for value in my_array %}
+                <li>{{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    {% elif sql == 'student' %}
+        <h3>해당 과목을 수강하는 학생들 명단입니다.</h3>
+        {% if my_array %}
+            <ul>
+                {% for value in my_array %}
+                <li>{{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    {% elif sql == 'score' %}
+        <h3>해당 과목을 수강하는 학생들의 인원 수와 평균 성적 입니다.</h3>
+        {% if my_array %}
+            <ul>
+                {% for value in my_array %}
+                <li>{{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    {% elif sql == 'having' %}
+        <h3>특정 학생이 수강 신청한 수업 명단 입니다.</h3>
+        {% if my_array %}
+            <ul>
+                {% for value in my_array %}
+                <li>{{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No data available.</p>
+        {% endif %}
+    {% endif %}
+    <br>
+    <br>
+    <button onclick="goBack()">Go Back</button>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+  </div>
+
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
